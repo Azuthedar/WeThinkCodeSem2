@@ -61,7 +61,7 @@ f_success
 	background-color: rgb(0, 0, 0);
 	width: 20%;
 	height: 100%;
-	margin-top: -634px;
+	margin-top: -618px;
 }
 
 #information
@@ -99,7 +99,7 @@ ul
 	margin-top: -48px;
 	list-style: none;
 	padding: 0;
-	
+
 }
 
 ul li a
@@ -114,7 +114,7 @@ ul li a
 	float: left;
 }
 
-ul li a: hover
+ul li a:hover
 {
 	background-color: rgb(120, 120, 120);
 }
@@ -152,7 +152,6 @@ table
 
 .button
 {
-	float:left;
 	text-decoration: none;
 	text-align: center;
 	font-size: 80px;
@@ -188,5 +187,5 @@ form .button:hover
 	width: 300px;
 	height: 50px;
 	font-size: 25px;
-	display: block;	
+	display: block;
 }

@@ -44,7 +44,7 @@ if ($st->rowCount() == 1)
 		}
 		else
 		{
-			$newLNameSt = $conn->prepare("UPDATE `users` SET `first_name` = :n_lastname WHERE `email` = :email");
+			$newLNameSt = $conn->prepare("UPDATE `users` SET `last_name` = :n_lastname WHERE `email` = :email");
 			$newLNameSt->bindParam(':n_lastname', $n_lastname);
 			$newLNameSt->bindParam(':email', $email);
 			$newLNameSt->execute();

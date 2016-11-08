@@ -2,10 +2,12 @@
 
 include('connect.php');
 
+session_start();
+
 $email = $_GET['email'];
 $password = hash("whirlpool", $_GET['password']);
 $n_email = $_GET['n_email'];
-
+$_SESSION['email'] = $n_email;
 
 $conn = Connect();
 $st = $conn->prepare("SELECT * FROM `users` WHERE email = :email");

@@ -2,16 +2,16 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="CSS/account_cp.css">
 		<?php
-		
+
 		include('update.php');
-		
+
 		?>
 		<script>
 			function openTab(tabName)
 			{
 				var		i;
 				var		x = document.getElementsByClassName("tab");
-				
+
 				for (i = 0; i < x.length; i++)
 				{
 					x[i].style.display = "none";
@@ -65,13 +65,13 @@
 						</div>
 					</div>
 				</div>
-				<?div
-				
-				if ($_GET['password'] == "clear")
+				<?php
+
+				if ($_GET['pass'] == "clear")
 				{
 					echo '<div><f_error>New Password field is blank.</f_error></div>';
 				}
-				
+
 				?>
 			</div>
 	</body>

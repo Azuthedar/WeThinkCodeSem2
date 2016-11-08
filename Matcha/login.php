@@ -19,8 +19,8 @@ $st->execute();
 $row = $st->fetch(PDO::FETCH_ASSOC);
 if ($st->rowCount() == 1)
 {
-	$_SESSION['logged'] = $email;
-	$email = $_SESSION['logged'];
+	$_SESSION['email'] = $email;
+	$email = $_SESSION['email'];
 	header("refresh:0;url=account.php?logged=$email");
 }
 else

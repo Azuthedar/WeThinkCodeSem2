@@ -6,7 +6,7 @@
 			{
 				var		i;
 				var		x = document.getElementsByClassName("tab");
-				
+
 				for (i = 0; i < x.length; i++)
 				{
 					x[i].style.display = "none";
@@ -27,14 +27,8 @@
 				<div class="textboxes">
 					<form action="update_bio.php">
 						<table>
-							<tr>
-								<td class="tableHeader">Biography</td>
-							</tr>
-							<tr>
-								<td>
-									<textarea class="textboxes" cols=86 rows=20 maxlength="500" placeholder="Max Length: 500 Characters. Update your biography..." name="n_biography"></textarea>
-								</td>
-							</tr>
+							<tr><td class="tableHeader">Biography</td></tr>
+							<tr><td><textarea class="textboxes" cols=86 rows=20 maxlength="500" placeholder="Max Length: 500 Characters. Update your biography..." name="n_biography"></textarea></td></tr>
 						</table>
 						<input class="button" type="submit" name="update" value="Update">
 					</form>
@@ -69,27 +63,27 @@
 				</div>
 				<div id="pPic"></div>
 				<?php
-					
+
 					if ($_GET['email'] == "new")
 					{
 						echo '<div><f_success>Your email has successfully been Updated.</f_success></div>';
 					}
-				
+
 					if ($_GET['pass'] == "update")
 					{
 						echo '<div><f_success>Your password has successfully been Updated.</f_success></div>';
 					}
-				
+
 					if ($_GET['bio'] == "new")
 					{
 						echo '<div><f_success>Your biography has successfully been Updated.</f_success></div>';
 					}
-				
+
 					if ($_GET['name'] == "new")
 					{
 						echo '<div><f_success>Your first and last name has successfully been Updated.</f_success></div>';
 					}
-				
+
 					?>
 			</div>
 	</body>

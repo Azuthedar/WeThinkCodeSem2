@@ -19,11 +19,11 @@ if ($st->rowCount() == 1)
 	{
 		if ($n_password == "")
 		{
-			header("refresh:0;url=account_cp.php?password=clear");
+			header("refresh:0;url=account_cp.php?pass=clear");
 		}
 		else
 		{
-			$npSt = $conn->prepare("UPDATE `users` SET :password = :n_password WHERE `password` = :password");
+			$npSt = $conn->prepare("UPDATE `users` SET `password` = :n_password WHERE `password` = :password");
 			$npSt->bindParam(':password', $password);
 			$npSt->bindParam(':n_password', $n_password);
 			$npSt->execute();

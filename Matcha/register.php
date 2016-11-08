@@ -11,13 +11,13 @@
             <center><a href="index.php" id="title">MATCHA</center></a>
 			<div id="msgs">
 				<?php
-				
+
 				//Random pickup lines
 				$slogans = array("Are you a magician? Because whenever I look at you, everyone else disappears!", "Are you an interior decorator? Because when I saw you, the entire room became beautiful.", "If I were a stop light, I'd turn red everytime you passed by, just so I could stare at you a bit longer.", "Does your left eye hurt? Because you've been looking right all day.", "Is Your Name WiFi? Because I'm Really Feeling a Connection.");
 				$randomise = rand(0, 4);
-				
+
 				echo $slogans[$randomise];
-				
+
 				?>
 			</div>
 			<div class="box">
@@ -34,7 +34,7 @@
 						<option selected="selected">Select Gender</option>
 						<option value="male">Male</option>
 						<option value="female">Female</option>
-						<option value="other">Other</option>
+						<option value="both">Both</option>
 					</select>
 					<select class="inputbox" name="preference" placeholder="Select Preference">
 						<option selected="selected">Select Preference</option>
@@ -290,18 +290,18 @@
 						<option value="YE">Yemen</option>
 						<option value="ZR">Zaire</option>
 						<option value="ZM">Zambia</option>
-						<option value="ZW">Zimbabwe</option>					
+						<option value="ZW">Zimbabwe</option>
 					</select>
 					<br>
 					<center><input class="button" type="submit" name="register" value="Register"></center>
 				</form>
 				<?php
-				
+
 				if ($_GET['error'] == "true")
 				{
 					echo '<div><f_r_error>One or more areas are invalid or empty!</f_r_error></div>';
 				}
-				
+
 				if ($_GET['email'] == "used")
 				{
 					echo '<div><f_r_error>Email Address already exists!</f_r_error></div>';
