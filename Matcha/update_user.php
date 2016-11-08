@@ -1,5 +1,7 @@
 <?php
 
+include('connect.php');
+
 $email = $_GET['email'];
 $password = hash("whirlpool", $_GET['password']);
 $firstname = $_GET['first_name'];
@@ -11,7 +13,7 @@ $conn = Connect();
 $st = $conn->prepare("SELECT * FROM `users` WHERE email = :email");
 $st->bindParam(':email', $email);
 $st->execute();
-if (st->rowCount() == 1)
+if ($st->rowCount() == 1)
 {
 	$passt = $conn->prepare("SELECT * FROM `users` WHERE password = :password");
 	$passt->bindParam(':password', $password);
@@ -32,7 +34,7 @@ if (st->rowCount() == 1)
 			$newNameSt->bindParam(':email', $email);
 			$newNameSt->execute();
 		}
-		
+
 		// LAST NAME
 	    if ($n_lastname == "")
 		{

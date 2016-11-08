@@ -1,13 +1,16 @@
 <?php
 
-$email = $_GET['logged'];
+include ('connect.php');
+
+session_start();
+
 $n_biography = $_GET['n_biography'];
 
 $conn = Connect();
 $st = $conn->prepare("SELECT * FROM `users` WHERE email = :email");
 $st->bindParam(':email', $email);
 $st->execute();
-if (st->rowCount() == 1)
+if ($st->rowCount() == 1)
 {
 	$nBio = $conn->prepare("UPDATE `users` SET `biography` = :n_biography");
 	$nBio->bindParam('n:biography', $n_biography);

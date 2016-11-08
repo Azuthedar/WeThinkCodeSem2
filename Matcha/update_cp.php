@@ -1,5 +1,7 @@
 <?php
 
+include('connect.php');
+
 $email = $_GET['email'];
 $password = hash('whirlpool', $_GET['password']);
 $n_password = hash('whirlpool', $_GET['n_password']);
@@ -8,7 +10,7 @@ $conn = Connect();
 $st = $conn->prepare("SELECT * FROM `users` WHERE email = :email");
 $st->bindParam(':email', $email);
 $st->execute();
-if (st->rowCount() == 1)
+if ($st->rowCount() == 1)
 {
 	$passtd = $conn->prepare("SELECT * FROM `users` WHERE password = :password");
 	$passtd->bindParam(':password', $password);

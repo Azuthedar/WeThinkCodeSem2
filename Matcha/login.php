@@ -1,11 +1,14 @@
 <?php
 
+session_start();
+
 include('connect.php');
 
 ini_set("display_startup_errors", 1);
 ini_set("display_errors", 1);
 
 $email = $_GET['email'];
+
 $pass = hash("whirlpool", $_GET['password']);
 
 $conn = Connect();
@@ -16,6 +19,8 @@ $st->execute();
 $row = $st->fetch(PDO::FETCH_ASSOC);
 if ($st->rowCount() == 1)
 {
+	$_SESSION['logged'] = $email;
+	$email = $_SESSION['logged'];
 	header("refresh:0;url=account.php?logged=$email");
 }
 else
