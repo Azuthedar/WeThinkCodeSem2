@@ -6,7 +6,7 @@
 			{
 				var		i;
 				var		x = document.getElementsByClassName("tab");
-				
+
 				for (i = 0; i < x.length; i++)
 				{
 					x[i].style.display = "none";
@@ -53,6 +53,13 @@
 						<a href="account_user.php">Change Name</a> <!-- Change Current Name / Last Name -->
 					</div>
 				</div>
+			</div>
+			<div>
+				<form action="update_upload.php" method="post" ecntype="multipart/form-data" id="uploader">
+					<span id="selector">Select Image to Upload</span>
+					<input type="file" name="fileUpload" id="fileUpload">
+					<input type="submit" value="Upload Image" name="submit">
+				</form>
 			</div>
 		</div>
 	</body>

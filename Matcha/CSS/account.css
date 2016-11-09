@@ -99,7 +99,7 @@ ul
 	margin-top: -48px;
 	list-style: none;
 	padding: 0;
-	
+
 }
 
 ul li a
@@ -114,7 +114,7 @@ ul li a
 	float: left;
 }
 
-ul li a: hover
+ul li a:hover
 {
 	background-color: rgb(120, 120, 120);
 }
@@ -152,7 +152,6 @@ table
 
 .button
 {
-	float:left;
 	text-decoration: none;
 	text-align: center;
 	font-size: 80px;
@@ -189,7 +188,7 @@ form .button:hover
 	width: 300px;
 	height: 50px;
 	font-size: 25px;
-	display: block;	
+	display: block;
 }
 
 #pPic
@@ -200,4 +199,22 @@ form .button:hover
 	background-color: beige;
 	width: 300px;
 	height: 300px;
+}
+
+#uploader
+{
+	float:right;
+	height: 100px;
+	width: 400px;
+	background-color: beige;
+	display: block;
+	border: 0.5px solid black;
+	padding-top: 10px;
+}
+
+#selector
+{
+	font-family: Tangerine;
+	font-size: 40px;
+	margin-left: 60px;
 }
